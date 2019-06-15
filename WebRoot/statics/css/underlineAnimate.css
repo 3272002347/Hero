@@ -1,0 +1,44 @@
+/* 普通实现 */
+.underlineAnimate {
+	position: relative;
+	text-decoration: none;
+}
+
+.underlineAnimate:before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: -2px;
+	width: 0;
+	height: 2px;
+	background: #4285f4;
+	transition: all .3s;
+}
+
+.underlineAnimate:hover:before {
+	width: 100%;
+	left: 0;
+	right: 0;
+}
+
+/* 渐变实现 */
+.underlineAnimate-gradient {
+	position: relative;
+	text-decoration: none;
+}
+
+.underlineAnimate-gradient:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	height: 2px;
+	width: 100%;
+	background: #4285f4;
+	transform: scale(0);
+	transition: all 0.3s;
+}
+
+.underlineAnimate-gradient:hover:before {
+	transform: scale(1);
+}

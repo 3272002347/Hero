@@ -1,0 +1,21 @@
+.DisplayDiv{
+	height: 100px;
+	padding-left: 5px;
+}
+.DisplayDiv img{
+	height: 90px;
+	margin-top: 5px;
+	margin-right: 10px;
+	width: 90px;
+	float: left;
+}
+.DisplayDiv h3{
+	float: left;
+}
+.inputDiv input,select,textarea{
+	border-radius: 5px;
+}
+.story{
+	height:200px;
+	width:150px;
+}

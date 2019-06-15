@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hero.firc.dao.ISkinDao">
+	<!-- 定义映射结果集(皮肤) -->
+	<resultMap type="Skin" id="skinMap">
+		<result property="id" column="Id" />
+		<result property="skinname" column="skinname" />
+		<result property="skinsrcid" column="skinsrcid" />
+		<result property="price" column="price" />
+		<result property="heroid" column="heroid" />
+	</resultMap>
+
+
+	<!-- 根据英雄查询单个(小图标) -->
+	<select id="getSkinHeroId" resultMap="skinMap">
+		SELECT * FROM skin AS s,src
+		AS sr WHERE s.skinsrcid=sr.`id` AND s.`heroid`=#{heroid} AND
+		s.skinname LIKE
+		'%图标%'
+	</select>
+
+
+	<!-- 根据英雄查询单个(大图标) -->
+	<select id="getSkinSrcId" resultMap="skinMap">
+		SELECT * FROM skin AS s,src
+		AS sr WHERE s.skinsrcid=sr.`id` AND s.`heroid`=#{heroid} AND s.skinname Not
+		LIKE '%图标%'
+	</select>
+</mapper>

@@ -1,0 +1,337 @@
+@CHARSET "UTF-8";
+
+.main {
+	padding-bottom: 100px;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	font-family: '\5FAE\8F6F\96C5\9ED1';
+	min-height: 976px;
+	background-image: url(/HeroWeb/statics/images/personio-bg.png);
+}
+
+.main-container {
+	width: 1240px;
+	margin: 0 auto;
+	position: relative;
+	font-size: 12px;
+	color: #444;
+}
+.userdetails dl {
+       margin: 15px 39px 19px 39px !important;
+    zoom: 1;
+    float: left;
+    width: 122px !important;
+    height: 180px !important;
+    display: block;
+    position: relative;
+    color: #606060;
+    background-position: -237px -6px;
+    z-index: 11;
+    cursor: default;
+    padding: 10px;
+    border: 1px solid #F0F0F0;
+    border-radius: 10px;
+}
+dl {
+    list-style: none;
+}
+dt {
+    display: block;
+}
+* {
+	-webkit-tap-highlight-color: transparent;
+	outline: 0;
+}
+
+.navi a {
+	font-size: 14px;
+	font-weight: 700;
+	border-bottom: 1px solid transparent;
+	color: #444;
+}
+
+.icon-home {
+	background-position: -1830px -76px;
+	width: 13px;
+	height: 12px;
+	margin-right: 10px;
+}
+
+.navi {
+	color: #888;
+	font-size: 12px;
+	position: relative;
+	height: 50px;
+	padding-top: 45px;
+}
+
+.navi:after {
+	background-position: -1185px 0;
+	width: 1240px;
+	height: 9px;
+}
+
+.userinfo {
+	height: 120px;
+	border: 1px solid #f1f1f1;
+	background: #fff;
+	margin-top: 110px;
+	font-size: 12px;
+	position: relative;
+	display: none;
+}
+
+.user-head {
+	position: absolute;
+	width: 138px;
+	height: 138px;
+	left: 55px;
+	top: -65px;
+}
+
+.user-head-bg,.user-head-none {
+	position: relative;
+	z-index: 2;
+}
+
+.user-head-bg {
+	background-position: 0 -151px;
+	width: 138px;
+	height: 138px;
+}
+
+.user-head-img {
+	width: 128px;
+	height: 128px;
+	line-height: 128px;
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	border-radius: 100%;
+	overflow: hidden;
+	font-size: 0;
+}
+
+img {
+	border: 0;
+}
+
+.user-head-img img {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+}
+
+.user-datum {
+	margin: -56px 0 0 242px;
+	width: 994px;
+}
+
+.d-wrap-0 {
+	position: relative;
+}
+
+.icon-arrow-nav {
+	width: 6px;
+	margin: 0 15px;
+	height: 10px;
+	background-image: url(/HeroWeb/statics/images/personio-img.png);
+	background-size: 2425px 572px;
+	background-repeat: no-repeat;
+	background-position: -1966px -76px;
+}
+
+a,i {
+	display: inline-block;
+}
+
+.user-datum .name {
+	font-size: 30px;
+	color: #444;
+	font-weight: 700;
+	text-align: center;
+	position: relative;
+	top: 3px;
+	margin-left: 0;
+}
+
+.operation {
+	display: inline-block;
+	text-align: right;
+	position: absolute;
+	right: 0;
+	top: 18px;
+}
+
+.operation a {
+	color: #444;
+}
+
+.d-wrap-2 {
+	margin-top: 15px;
+}
+
+.operation a:hover {
+	-webkit-filter: none;
+	filter: none;
+	color: #0baac0;
+}
+
+.d-wrap-2 a:first-child {
+	text-align: right;
+	padding-left: 0;
+	cursor: pointer;
+}
+
+
+.d-wrap-2 .icon-currency {
+	margin: 0 5px 0 0;
+	vertical-align: -3px;
+}
+
+.icon-currency {
+	background-position: -1514px -137px;
+	width: 16px;
+	height: 16px;
+}
+
+a:hover {
+	text-decoration: none !important;
+}
+
+.num {
+	color: #0baac0;
+	font-weight: 700;
+}
+
+.d-wrap-2 span {
+	display: block;
+}
+
+.d-wrap-2 a {
+	padding: 0 24px;
+}
+
+a {
+	text-align: center;
+}
+
+#J_logout {
+	transition: border .3s, color .3s;
+	text-decoration: none;
+}
+
+.icon-cancel {
+	background-position: -1734px -137px;
+	width: 13px;
+	height: 14px;
+	vertical-align: middle;
+	margin: 0 5px;
+	background-image:
+		url(//ossweb-img.qq.com/images/lol/space/sprite-img.png);
+	background-size: 2425px 572px;
+	background-repeat: no-repeat;
+}
+
+.user-nav.nav-3 {
+	overflow: hidden;
+}
+
+.user-nav.nav-3>a {
+	width: 50%;
+}
+
+.user-nav>a.on span {
+	font-weight: 700;
+	color: #0baac0;
+}
+
+.user-nav span {
+	display: block;
+	margin-top: 30px;
+}
+
+.user-nav {
+	height: 99px;
+	border: 1px solid #f1f1f1;
+	border-top: none;
+	font-size: 0;
+	background: #fff;
+	overflow: hidden;
+	display: none;
+}
+
+.Chinese {
+	font-size: 18px;
+	color:black;
+}
+
+.underlineAnimate {
+	position: relative;
+	text-decoration: none;
+}
+
+.hoveron {
+	color: #0baac0;
+}
+
+.underlineAnimate:before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: -30px;
+	width: 0;
+	height: 12px;
+	background: #4285f4;
+	transition: all .3s;
+}
+
+.underlineAnimate:hover:before {
+	width: 100%;
+	left: 0;
+	right: 0;
+}
+
+/* 渐变实现 */
+.underlineAnimate-gradient {
+	position: relative;
+	text-decoration: none;
+}
+
+.underlineAnimate-gradient:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -30px;
+	height: 12px;
+	width: 100%;
+	background: #4285f4;
+	transform: scale(0);
+	transition: all 0.3s;
+}
+
+.underlineAnimate-gradient:hover:before {
+	transform: scale(1);
+}
+
+.userdetails {
+	height: 1200px;
+	width:100%;
+	min-width:1240px;
+	display: inline-block;
+	position:relative;
+	margin-top:15px;
+	border: 1px solid #f1f1f1;
+	background-color:#FFFFFF;
+}
+.tobuy:hover{
+	color:#4285f4;
+}
+.user-nav .English {
+	font-size: 12px;
+	color: #aaa;
+	display: block;
+	margin-top: 0;
+	font-weight: 400;
+}

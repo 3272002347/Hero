@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hero.firc.dao.ISkillDao">
+	<!-- 定义映射结果集(技能) -->
+	<resultMap type="Skill" id="skillMap">
+		<result property="id" column="Id" />
+		<result property="skillname" column="skillname" />
+		<result property="addition" column="addition" />
+		<result property="skillsrcid" column="skillsrcid" />
+		<result property="heroid" column="heroid" />
+
+		<!-- 映射集合属性(图标) -->
+		<association property="hero" javaType="Hero">
+			<result property="id" column="id" />
+			<result property="heroname" column="heroname" />
+			<result property="herostory" column="herostory" />
+			<result property="price" column="price" />
+			<result property="viedoSrc" column="viedoSrc" />
+			<result property="herotypeid" column="herotypeid" />
+		</association>
+	</resultMap>
+	<!-- 根据英雄查技能 -->
+	<select id="SkillId" resultMap="skillMap">
+		SELECT * FROM skill AS s ,hero AS
+		h ,src AS sr WHERE
+		s.heroid= h.`id` AND s.skillsrcid=sr.id AND
+		s.heroid= #{heroid}
+	</select>
+
+</mapper>

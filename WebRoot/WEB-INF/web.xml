@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee,http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<display-name></display-name>
+	<mime-mapping>
+		<extension>ico</extension>
+		<mime-type>images/x-icon</mime-type>
+	</mime-mapping>
+	<filter>
+		<filter-name>EncodingFilter</filter-name>
+		<filter-class>cn.hero.firc.util.EncodingFilter</filter-class>
+		<init-param>
+			<param-name>encode</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>EncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<servlet>
+		<servlet-name>HeroListServlet</servlet-name>
+		<servlet-class>cn.hero.firc.web.pre.HeroListServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>HeroStoreServlet</servlet-name>
+		<servlet-class>cn.hero.firc.web.pre.HeroStoreServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SjskilListServlet</servlet-name>
+		<servlet-class>cn.hero.firc.web.pre.SjskilListServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetPageStoreServlet</servlet-name>
+		<servlet-class>cn.hero.firc.web.pre.GetPageStoreServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>cn.hero.firc.web.pre.LoginServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SkinStoreServlet</servlet-name>
+		<servlet-class>cn.hero.firc.web.pre.SkinStoreServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>QueryUserByIdSerlet</servlet-name>
+		<servlet-class>cn.hero.firc.web.backend.QueryUserByIdSerlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetPageSkinServlet</servlet-name>
+		<servlet-class>cn.hero.firc.web.pre.GetPageSkinServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>LoginOutServlet</servlet-name>
+		<servlet-class>cn.hero.firc.web.pre.LoginOutServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>EquipListServlet</servlet-name>
+		<servlet-class>cn.hero.firc.web.pre.EquipListServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>HeroDefailServlet</servlet-name>
+		<servlet-class>cn.hero.firc.web.pre.HeroDefailServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SkinListServlet</servlet-name>
+		<servlet-class>cn.hero.firc.web.pre.SkinListServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>HeroListServlet_ly</servlet-name>
+		<servlet-class>cn.hero.firc.web.backend.HeroListServlet_ly</servlet-class>
+	</servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetUserServlet</servlet-name>
+    <servlet-class>cn.hero.firc.web.pre.GetUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EquipAjaxServlet</servlet-name>
+    <servlet-class>cn.hero.firc.web.backend.EquipAjaxServlet</servlet-class>
+  </servlet>
+ <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserListServlet_ly</servlet-name>
+    <servlet-class>cn.hero.firc.web.backend.UserListServlet_ly</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>NumberCheckServlet</servlet-name>
+    <servlet-class>cn.hero.firc.web.pre.NumberCheckServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RechargeServlet</servlet-name>
+    <servlet-class>cn.hero.firc.web.pre.RechargeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>HeroNameServlet</servlet-name>
+    <servlet-class>cn.hero.firc.web.pre.HeroNameServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>HuserAddServlet</servlet-name>
+    <servlet-class>cn.hero.firc.web.backend.HuserAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>HeroAddServlet</servlet-name>
+    <servlet-class>cn.hero.firc.web.backend.HeroAddServlet</servlet-class>
+  </servlet>
+
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegistServlet</servlet-name>
+    <servlet-class>cn.hero.firc.web.pre.RegistServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChecknumberServlet</servlet-name>
+    <servlet-class>cn.hero.firc.web.pre.ChecknumberServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteHeroServlet</servlet-name>
+    <servlet-class>cn.hero.firc.web.backend.DeleteHeroServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <servlet-class>cn.hero.firc.web.backend.AdminLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BuyThingsServlet</servlet-name>
+    <servlet-class>cn.hero.firc.web.pre.BuyThingsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PayForThingServlet</servlet-name>
+    <servlet-class>cn.hero.firc.web.pre.PayForThingServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BuyHeroServlet</servlet-name>
+    <servlet-class>cn.hero.firc.web.pre.BuyHeroServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetUserHerosServlet</servlet-name>
+    <servlet-class>cn.hero.firc.web.pre.GetUserHerosServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GeuUserSkinsServlet</servlet-name>
+    <servlet-class>cn.hero.firc.web.pre.GeuUserSkinsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisterOnServlet</servlet-name>
+    <servlet-class>cn.hero.firc.web.pre.RegisterOnServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryHeroByIdServlet</servlet-name>
+    <servlet-class>cn.hero.firc.web.backend.QueryHeroByIdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateHuserServlet</servlet-name>
+    <servlet-class>cn.hero.firc.web.backend.UpdateHuserServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EquipAddServlet</servlet-name>
+    <servlet-class>cn.hero.firc.web.backend.EquipAddServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryUserByIdSerlet</servlet-name>
+    <servlet-class>cn.hero.firc.web.backend.QueryUserByIdSerlet</servlet-class>
+  </servlet>
+
+<servlet-mapping>
+		<servlet-name>UserListServlet_ly</servlet-name>
+		<url-pattern>/UserListServlet_ly</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HeroStoreServlet</servlet-name>
+		<url-pattern>/HeroStoreServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>QueryUserByIdSerlet</servlet-name>
+		<url-pattern>/QueryUserByIdSerlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HeroListServlet_ly</servlet-name>
+		<url-pattern>/HeroListServlet_ly</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HeroListServlet</servlet-name>
+		<url-pattern>/HeroListServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SjskilListServlet</servlet-name>
+		<url-pattern>/SjskilListServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetPageStoreServlet</servlet-name>
+		<url-pattern>/GetPageStoreServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/LoginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SkinStoreServlet</servlet-name>
+		<url-pattern>/SkinStoreServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetPageSkinServlet</servlet-name>
+		<url-pattern>/GetPageSkinServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginOutServlet</servlet-name>
+		<url-pattern>/LoginOutServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EquipListServlet</servlet-name>
+		<url-pattern>/EquipListServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HeroDefailServlet</servlet-name>
+		<url-pattern>/HeroDefailServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SkinListServlet</servlet-name>
+		<url-pattern>/SkinListServlet</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetUserServlet</servlet-name>
+    <url-pattern>/GetUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EquipAjaxServlet</servlet-name>
+    <url-pattern>/EquipAjaxServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NumberCheckServlet</servlet-name>
+    <url-pattern>/NumberCheckServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RechargeServlet</servlet-name>
+    <url-pattern>/RechargeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HeroNameServlet</servlet-name>
+    <url-pattern>/HeroNameServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HuserAddServlet</servlet-name>
+    <url-pattern>/HuserAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HeroAddServlet</servlet-name>
+    <url-pattern>/HeroAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegistServlet</servlet-name>
+    <url-pattern>/RegistServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChecknumberServlet</servlet-name>
+    <url-pattern>/ChecknumberServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BuyThingsServlet</servlet-name>
+    <url-pattern>/BuyThingsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PayForThingServlet</servlet-name>
+    <url-pattern>/PayForThingServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BuyHeroServlet</servlet-name>
+    <url-pattern>/BuyHeroServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetUserHerosServlet</servlet-name>
+    <url-pattern>/GetUserHerosServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GeuUserSkinsServlet</servlet-name>
+    <url-pattern>/GeuUserSkinsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterOnServlet</servlet-name>
+    <url-pattern>/RegisterOnServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteHeroServlet</servlet-name>
+    <url-pattern>/DeleteHeroServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <url-pattern>/AdminLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryHeroByIdServlet</servlet-name>
+    <url-pattern>/QueryHeroByIdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateHuserServlet</servlet-name>
+    <url-pattern>/UpdateHuserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EquipAddServlet</servlet-name>
+    <url-pattern>/EquipAddServlet</url-pattern>
+  </servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>welcome.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

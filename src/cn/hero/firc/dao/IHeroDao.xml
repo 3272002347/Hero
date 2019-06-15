@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hero.firc.dao.IHeroDao">
+	<!-- 定义映射结果集(英雄) -->
+	<resultMap type="Hero" id="heroMap">
+		<result property="id" column="Id" />
+		<result property="heroname" column="heroname" />
+		<result property="herostory" column="herostory" />
+		<result property="price" column="price" />
+		<result property="viedoSrc" column="viedoSrc" />
+		<result property="herotypeid" column="herotypeid" />
+
+		<!-- 映射集合属性(图标) -->
+		<collection property="srcList" ofType="Src">
+			<result property="id" column="id" />
+			<result property="imgsrc" column="imgsrc" />
+			<result property="imgtypeid" column="imgtypeid" />
+			<result property="corrId" column="corrId" />
+		</collection>
+
+		<!-- 映射集合属性(英雄类别) -->
+		<collection property="htype" ofType="Htype">
+			<result property="id" column="id" />
+			<result property="htypename" column="htypename" />
+			<result property="postionname" column="postionname" />
+		</collection>
+
+		<!-- 映射集合属性(英雄技能) -->
+		<collection property="skillList" ofType="Skill">
+			<result property="id" column="Id" />
+			<result property="skillname" column="skillname" />
+			<result property="addition" column="addition" />
+			<result property="skillsrcid" column="skillsrcid" />
+			<result property="heroid" column="heroid" />
+		</collection>
+	</resultMap>
+
+	<!-- 查询所有英雄 -->
+	<select id="queryHeros" parameterType="Hero" resultType="Hero"
+		resultMap="heroMap">
+		SELECT * FROM src AS s,hero AS
+		h WHERE s.corrId=h.`id` AND
+		s.`imgtypeid`=1
+		<if test="heroname!=null and heroname!=''">
+			and h.heroname like #{heroname}
+		</if>
+		<if test="herostory!=null and herostory!=''">
+			and h.herostory=#{herostory}
+		</if>
+		<if test="herotypeid!=null and herotypeid!=''">
+			and h.herotypeid = #{herotypeid}
+		</if>
+		<if test="viedoSrc!=null and viedoSrc!=''">
+			and h.herotypeid = #{viedoSrc}
+		</if>
+	</select>
+
+
+	<!-- 查询英雄分类 -->
+	<select id="queryByherotypeid" resultMap="heroMap">
+		SELECT h.*,t.* FROM
+		`hero` h,htype t WHERE h.herotypeid=t.id
+		AND h.`id`=#{id}
+	</select>
+
+	<!-- 根据英雄查技能 -->
+	<select id="SkillId" resultMap="heroMap">
+		SELECT * FROM hero AS h, skill AS
+		s
+		,src AS sr WHERE
+		s.heroid= h.`id` AND s.skillsrcid=sr.id AND
+		s.heroid=
+		#{heroid}
+	</select>
+
+</mapper>

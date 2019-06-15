@@ -1,0 +1,125 @@
+@CHARSET "UTF-8";
+div{
+	padding:0px;
+	margin:0px;
+}
+body{
+	background-color:white;
+}
+.main{
+	    position: relative;
+    width: 70%;
+    max-width: 1920px;
+    min-width: 1240px;
+    overflow: hidden;
+    height: 900px;
+    margin: 0 auto;
+	background-image:url(/HeroWeb/statics/images/bgc.jpg);
+	background-repeat: no-repeat;
+	background-size:100% 900px;
+}
+.icon-arrow-nav{
+	
+}
+.formone{
+	width:600px;
+	height:450px;
+}
+.centerdiv{
+	position:absolute;
+	right:30%;
+	top:150px;
+	border:1px solid #1B57D3;
+	border-radius:6px;
+	opacity:0.8;
+	background-color:white;
+}
+h1,h3{
+	margin:10px 0 10px 30px !important;
+}
+h1{
+	font-size:24px;
+	color:#000000;
+}
+input{
+	margin:10px 0 10px 30px !important;	
+}
+input[name]{
+	    border: 1px #aaa solid;
+    border-radius: 4px;
+    background: 0 0;
+    text-align: left;
+    font-size: 20px;
+    width: 438px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+}
+.a-upload {
+    padding: 4px 10px;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+    color: #888;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
+}
+.head-img{
+	margin:10px 0 10px 30px !important;
+    text-align: left;
+}
+#my-img{
+	    cursor: pointer;
+	    width:66px;
+	    height:66px;
+}
+#img-upload{
+    display: none;
+}
+
+.a-upload  input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}
+.submit:hover,input[type='reset']:hover {
+    background-color: #3580eb;
+    background-image: linear-gradient(0deg,#3580eb,#2c79eb);
+}
+.submit,input[type='reset']{
+	    border: 1px #3083ff solid;
+    border-radius: 4px;
+    background-color: #3487ff;
+    box-shadow: 0 5px 8px 0 rgba(24,95,255,.1);
+    color: #fff;
+    text-align: center;
+    font-weight: lighter;
+    background-image: linear-gradient(0deg,#398bff,#3083ff);
+    width:240px;
+    height: 60px;
+    margin: 40px 0 8px;
+    font-size: 24px;
+}
+.a-upload:hover {
+    color: #444;
+    background: #eee;
+    border-color: #ccc;
+    text-decoration: none
+}
+input[type='file']{
+	border:none;
+	
+}
+h3{
+	font-size:18px;
+}

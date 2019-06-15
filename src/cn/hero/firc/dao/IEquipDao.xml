@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hero.firc.dao.IEquipDao">
+	<!-- 定义映射结果集(装备) -->
+	<resultMap type="Equip" id="equipMap">
+		<result property="id" column="Id" />
+		<result property="equipment" column="equipment" />
+		<result property="etypename" column="etypename" />
+		<result property="esrcid" column="esrcid" />
+
+		<!-- 映射集合属性(图标) -->
+		<association property="src" javaType="Src">
+			<result property="id" column="id" />
+			<result property="imgsrc" column="imgsrc" />
+			<result property="imgtypeid" column="imgtypeid" />
+			<result property="corrId" column="corrId" />
+		</association>
+	</resultMap>
+
+	<!-- 查询所有装备 -->
+	<select id="queryEquipsPage" parameterType="Equip" resultType="Equip"
+		resultMap="equipMap">
+		SELECT * FROM equip AS
+		e,src
+		AS s
+		WHERE
+		e.`esrcid`=s.`id`
+		<if test="equipment!=null and equipment!=''">
+			and e.equipment like #{equipment}
+		</if>
+	</select>
+</mapper>

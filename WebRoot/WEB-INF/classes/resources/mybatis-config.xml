@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!-- 通过这个配置文件完成mybatis与数据库的连接 -->
+<configuration>
+	<!-- 引用外部的数据源配置文件 -->
+	<properties resource="resources/database.properties"></properties>
+
+	<!-- 配置mybatis的log实现为LOG4J -->
+	<settings>
+		<setting name="logImpl" value="LOG4J" />
+	</settings>
+
+
+	<!-- 加载实体类和别名 -->
+	<typeAliases>
+		<package name="cn.hero.firc.entity"></package>
+	</typeAliases>
+
+	<!-- 配置开发环境 -->
+	<environments default="abc">
+		<environment id="abc">
+			<!-- 以JDBC形式管理数据库事务 -->
+			<transactionManager type="JDBC"></transactionManager>
+
+			<!-- 以连接池形成管理数据源 -->
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${user}" />
+				<property name="password" value="${password}" />
+			</dataSource>
+
+		</environment>
+	</environments>
+	<!-- 加载映射文件 -->
+	<mappers>
+		<mapper resource="cn/hero/firc/dao/IEquipDao.xml"></mapper>
+		<mapper resource="cn/hero/firc/dao/IHeroDao.xml"></mapper>
+		<mapper resource="cn/hero/firc/dao/ISkinDao.xml"></mapper>
+		<mapper resource="cn/hero/firc/dao/ISkillDao.xml"></mapper>
+		<mapper resource="cn/hero/firc/dao/ISjskilDao.xml"></mapper>
+	</mappers>
+</configuration>
